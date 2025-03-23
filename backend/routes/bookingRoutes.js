@@ -1,16 +1,22 @@
 import express from "express";
-import { bookEvent, getUserBookings, cancelBooking } from "../controllers/bookingController.js";
-import { protect } from "../middleware/authMiddleware.js";
+import { 
+  bookEvent, 
+  getUserBookings, 
+  cancelBooking, 
+  getAllBookings, 
+  verifyQRCodeCheckIn 
+} from "../controllers/bookingController.js";
+import { protect, adminMiddleware } from "../middleware/authMiddleware.js";
 
 const bookingRouter = express.Router();
 
-// 📌 Book an Event with Seat Selection
-bookingRouter.post("/book", protect, bookEvent);  // Requires { eventId, seatNumber }
-
-// 📌 Get All Bookings for the Logged-in User
+// 📌 User Routes
+bookingRouter.post("/book", protect, bookEvent);
 bookingRouter.get("/my-bookings", protect, getUserBookings);
-
-// 📌 Cancel a Booking
 bookingRouter.delete("/cancel/:bookingId", protect, cancelBooking);
+
+// 📌 Admin Routes
+bookingRouter.get("/", protect, adminMiddleware, getAllBookings);
+bookingRouter.post("/verify", protect, adminMiddleware, verifyQRCodeCheckIn);
 
 export default bookingRouter;

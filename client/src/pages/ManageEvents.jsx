@@ -218,7 +218,7 @@ const ManageEvents = () => {
                           className="bg-gray-800 text-white p-2 rounded w-20"
                         />
                       ) : (
-                        `$${event.ticketPrice}`
+                        `₹${event.ticketPrice}`
                       )}
                     </td>
 

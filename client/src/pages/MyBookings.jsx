@@ -98,7 +98,7 @@ const MyBookings = () => {
                   📍 {booking.event.location}
                 </span>
                 <span className="px-3 py-1 bg-gray-800 text-white text-sm rounded-full shadow-md">
-                  🎟️ {booking.event.ticketPrice > 0 ? `$${booking.event.ticketPrice}` : "Free"}
+                  🎟️ {booking.event.ticketPrice > 0 ? `₹${booking.event.ticketPrice}` : "Free"}
                 </span>
                 <span className="px-3 py-1 bg-gray-800 text-white text-sm rounded-full shadow-md">
                   👥 Max Attendees: {booking.event.maxAttendees}

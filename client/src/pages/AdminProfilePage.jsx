@@ -59,7 +59,7 @@ const AdminProfile = () => {
               {/* Admin Details */}
               <div className="mt-6 w-full flex flex-col gap-4">
                 <ProfileDetail title="📧 Email" value={admin.email} />
-                <ProfileDetail title="📞 Phone" value={admin.phone} />
+                <ProfileDetail title="📞 Phone" value={admin.phone || 9704440468} />
               </div>
 
               {/* Action Buttons */}

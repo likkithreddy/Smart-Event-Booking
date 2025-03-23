@@ -64,7 +64,7 @@ const UserProfile = () => {
         {/* User Details */}
         <div className="mt-6 space-y-4">
           <div className="flex items-center justify-between bg-gray-800 p-3 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
-            <span className="text-gray-300">📞 Phone:</span>
+            <span className="text-gray-300">📞 Phone:9704440468</span>
             <span className="text-white font-medium">{user.phone}</span>
           </div>
 

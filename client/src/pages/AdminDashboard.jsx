@@ -40,7 +40,7 @@ const AdminDashboard = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <StatCard title="Total Events" value={stats.totalEvents} icon="🎟️" />
             <StatCard title="Total Attendees" value={stats.totalAttendees} icon="👥" />
-            <StatCard title="Revenue" value={`$${stats.revenue}`} icon="💰" />
+            <StatCard title="Revenue" value={`₹${stats.revenue}`} icon="💰" />
             <StatCard title="Upcoming Events" value={stats.upcomingEvents} icon="📅" />
           </div>
 

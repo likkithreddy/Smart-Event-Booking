@@ -20,7 +20,7 @@ const Login = () => {
       const { data } = await axios.post("http://localhost:4000/api/auth/login", formData);
 
       if (data.token) {
-        toast.success("✅ Login successful!", {
+        toast.success("Login successful!", {
           position: "top-right",
           autoClose: 2000,
           theme: "dark",
@@ -32,7 +32,7 @@ const Login = () => {
           navigate(data.role === "admin" ? "/admin" : "/");
         }, 2000);
       } else {
-        toast.error(`❌ ${data.message || "Login failed!"}`, {
+        toast.error(`${data.message || "Login failed!"}`, {
           position: "top-right",
           autoClose: 3000,
           theme: "dark",
@@ -40,7 +40,7 @@ const Login = () => {
       }
     } catch (err) {
       const errorMessage = err.response?.data?.message || "Login failed!";
-      toast.error(`❌ ${errorMessage}`, {
+      toast.error(` ${errorMessage}`, {
         position: "top-right",
         autoClose: 3000,
         theme: "dark",

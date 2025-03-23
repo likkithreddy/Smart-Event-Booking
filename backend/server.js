@@ -6,6 +6,7 @@ import authRouter from "./routes/authRoutes.js";
 import eventRouter from "./routes/eventRoutes.js";
 import bookingRouter from "./routes/bookingRoutes.js";
 import seatRouter from "./routes/seatRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -18,6 +19,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/events", eventRouter);
 app.use("/api/bookings", bookingRouter);
 app.use("/api/seats", seatRouter);
+app.use("/api/payment", paymentRoutes);
 
 
 app.use("*",(req,res)=>{

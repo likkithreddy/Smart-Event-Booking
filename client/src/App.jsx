@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import ManageEvents from "./pages/ManageEvents";
 import UserProfile from "./pages/UserProfilePage";
 import MyBookings from "./pages/MyBookings";
+import AdminBookings from "./pages/AdminBookings";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/create-events" element={<CreateEvent />} />
           <Route path="/admin/manage-events" element={<ManageEvents />} />
+          <Route path="/admin/bookings" element={<AdminBookings />} />
         </Routes>
       </Router>
     </AuthProvider>

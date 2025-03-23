@@ -77,6 +77,9 @@ const Navbar = () => {
                   <Link to="/admin/manage-events" className="hover:text-yellow-400 transition">
                     Manage Events
                   </Link>
+                  <Link to="/admin/bookings" className="hover:text-yellow-400 transition">
+                    Bookings
+                  </Link> {/* ✅ NEW ADMIN BOOKING LINK */}
                 </>
               )}
 
